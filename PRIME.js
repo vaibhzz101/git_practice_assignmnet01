@@ -1,20 +1,22 @@
-function prime_number(num)
-{
-let temp=0;
-for(i=2;i<=num-1;i++)
-  { 
-   if(num%2==0)
-   {
-    temp=temp+1;
-   }
-  }
-if(temp==0)
-{
- console.log("Prime number");
+
+function prime(number){
+    let factors=0;
+     for(let i=1; i<=number; i++){
+              if(number%i==0){
+                  factors++;
+                }
+             }
+               if(factors==2){
+                 return true;
+          }
+             return false;
+        }
+
+  let answer=prime(17);
+  if(answer==true){
+            console.log("prime");
+}  else {
+          console.log("not prime");
 }
-else
-{
-console.log("Not a prime number");
-}
-}
-prime_number(17)
+
+
